@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🍔 FastFood - Comandă Acum</title>
+    <title>🍔 FlacaraFood - Comandă Acum</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -472,7 +472,7 @@
     <div class="bg-animation"></div>
 
     <header>
-        <div class="logo">🔥 FASTFOOD</div>
+        <div class="logo">🔥 FlacaraFood</div>
         <button class="cart-btn" onclick="toggleCart()">
             🛒 Coș
             <span class="cart-count" id="cartCount">0</span>
@@ -525,7 +525,7 @@
     </section>
 
     <footer>
-        <p>© 2026 FastFood. Toate drepturile rezervate.</p>
+        <p>© 2026 FlacaraFood. Toate drepturile rezervate.</p>
     </footer>
 
     <!-- Cart Sidebar -->
@@ -662,7 +662,7 @@
             if (cart.length === 0) return;
             
             const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
-            let message = "🍔 *Comandă FastFood*%0A%0A";
+            let message = "🍔 *Comandă FlacaraFood*%0A%0A";
             
             cart.forEach(item => {
                 message += `${item.qty}x ${item.name} - ${item.price * item.qty} lei%0A`;
