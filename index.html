@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🍔 FlacaraFood - Comandă Acum</title>
+    <meta name="description" content="Comandă mâncare online din Galați">
+    <meta name="theme-color" content="#ff6b35">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/garconaibot/FlacaraFood/master/icon-192.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -716,6 +720,13 @@
 
         // Initialize
         renderMenu();
+        
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(reg => console.log('SW registered'))
+                .catch(err => console.log('SW error', err));
+        }
     </script>
 </body>
 </html>
